@@ -35,3 +35,6 @@ Plan: `~/.claude/plans/magical-noodling-candy.md`.
 
 ## Ingested 2026-10-17
 - [ ] QA.
+
+## Ingested 2026-10-25
+- [ ] Needs a better name. (Probe Apple first, one name everywhere.)
