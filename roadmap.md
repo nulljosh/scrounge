@@ -1,4 +1,4 @@
-# Curbfind roadmap
+# Scrounge roadmap
 
 > Priority tier 1 (2026-10-17): live blocker, work first. Order: live blockers, ship pushes, active features, portfolio, exploratory. See ~/Documents/Code/LOOP-HANDOFF.md.
 
@@ -8,12 +8,12 @@ Plan: `~/.claude/plans/magical-noodling-candy.md`.
 ## Open
 - [ ] ~~App icon~~ (done 2026-09-05, location pin on dark — city search is the core action), `architecture.svg`, `metadata/`, `.asc/workflow.json`.
 - [ ] OfferUp reviews complain about off-platform scam redirects and bans with
-      no recourse. Curbfind (browser, no payments) sidesteps that class of
+      no recourse. Scrounge (browser, no payments) sidesteps that class of
       complaint entirely — worth a line in store copy once listed.
       photo grid has no watch story and no visionOS-specific affordance.
 
 ## Notes
-- Live at curbfind.heyitsmejosh.com. Serve and share that, never the pages.dev URL.
+- Live at scrounge.jaybulb.com. Serve and share that, never the pages.dev URL.
 - `sapi` ignores User-Agent completely, so native needs no disguise and no server.
 - `cc` is ignored upstream; any page size but 360 is rejected.
 - Posting bodies are stranger-authored HTML. Both decoders strip them to plain
@@ -38,4 +38,8 @@ Plan: `~/.claude/plans/magical-noodling-candy.md`.
 - [x] QA. (covered by the 2026-10-26 check above)
 
 ## Ingested 2026-10-25
-- [x] Decided 2026-10-26: name stays Curbfind (wiki 2026-10-21 decision stands; a rename needs an Apple name probe and ASC login is throttled). Old line: Needs a better name.
+- [x] Renamed Curbfind to Scrounge 2026-10-26 (Joshua: one word, you decide). Repo, folder, code, landing and docs done; commit on main.
+
+## Rename follow-ups, 2026-10-26
+- [ ] DNS: add `scrounge` CNAME to `curbside-3v2.pages.dev` (proxied) in the jaybulb.com zone. The Pages custom domain `scrounge.jaybulb.com` is already added to project `curbside`, and the old `curbfind.jaybulb.com` host serves the new build; the auto mode classifier blocked the DNS write. Then curl https://scrounge.jaybulb.com/ for 200.
+- [ ] App Store: needs `asc web auth login` (throttled, skipped 2026-10-26). Probe "Scrounge" on record 6809031662 (`asc-name-creator`, one name everywhere, read it back 3x), then set name on the next editable version (iOS 1.0.0 is REJECTED 4.3, so edit that version's app info). If Apple refuses, pick another one-word name and redo the sweep. Store still says Curbfind until then.
