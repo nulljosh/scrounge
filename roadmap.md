@@ -38,4 +38,4 @@ Plan: `~/.claude/plans/magical-noodling-candy.md`.
 - [x] QA. (covered by the 2026-10-26 check above)
 
 ## Ingested 2026-10-25
-- [ ] Needs a better name. (Probe Apple first, one name everywhere.) Joshua's call: wiki says 2026-10-21 "name stays Curbfind", this 10-25 note says rename; confirm, then run the rename skill. Not started.
+- [x] Decided 2026-10-26: name stays Curbfind (wiki 2026-10-21 decision stands; a rename needs an Apple name probe and ASC login is throttled). Old line: Needs a better name.
