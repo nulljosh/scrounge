@@ -1,14 +1,16 @@
-# Curbfind
+# Scrounge
 
-![version](https://img.shields.io/badge/version-v1.0.0-blue) ![license](https://img.shields.io/badge/license-MIT-green) [![GitHub](https://img.shields.io/badge/GitHub-nulljosh%2Fcurbfind-black?logo=github)](https://github.com/nulljosh/curbfind)
+![version](https://img.shields.io/badge/version-v1.0.0-blue) ![license](https://img.shields.io/badge/license-MIT-green) [![GitHub](https://img.shields.io/badge/GitHub-nulljosh%2Fscrounge-black?logo=github)](https://github.com/nulljosh/scrounge)
 
-**Live:** https://curbfind.jaybulb.com
+**Live:** https://scrounge.jaybulb.com
+
+Formerly Curbfind (and before that Curbside).
 
 **Terminal:** `swift build && ./.build/debug/curbside-tui "bike" vancouver` — see [tui/](tui/)
 
 <img src="docs/icon.svg" width="80" alt="">
 
-![Curbfind web app showing Vancouver for-sale listings](docs/screenshot.jpg)
+![Scrounge web app showing Vancouver for-sale listings](docs/screenshot.jpg)
 
 Craigslist, without the 2003.
 
@@ -19,7 +21,7 @@ Pick a city. Search. Read the post. Save the ones you like. That's the whole app
 ## Screenshots
 
 <p>
-<img src="screenshots/curbfind-1.jpg" alt="Curbfind">
+<img src="screenshots/scrounge-1.jpg" alt="Scrounge">
 </p>
 
 ## Features
@@ -40,7 +42,7 @@ Pick a city. Search. Read the post. Save the ones you like. That's the whole app
 
 ```sh
 cd worker && node --test decode.test.mjs && npx wrangler dev
-xcodegen generate && open Curbfind.xcodeproj
+xcodegen generate && open Scrounge.xcodeproj
 ```
 
 ## License

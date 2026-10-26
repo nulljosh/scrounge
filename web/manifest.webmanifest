@@ -1,6 +1,6 @@
 {
-  "name": "Curbfind",
-  "short_name": "Curbfind",
+  "name": "Scrounge",
+  "short_name": "Scrounge",
   "start_url": "/app/",
   "scope": "/app/",
   "display": "standalone",

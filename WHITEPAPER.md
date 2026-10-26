@@ -1,17 +1,17 @@
-# Curbfind Technical Whitepaper
+# Scrounge Technical Whitepaper
 
 **v1.0.0** | September 2026
 
 Craigslist's own site is slow, cluttered with ads, and hard to scan on a
-phone. Curbfind exists because the listings are good and the interface
+phone. Scrounge exists because the listings are good and the interface
 around them isn't: pick a city, search, read the posting, save favourites,
 nothing else. Web app plus native SwiftUI iOS and macOS apps. Live at
-[curbfind.heyitsmejosh.com](https://curbfind.heyitsmejosh.com).
+[scrounge.jaybulb.com](https://scrounge.jaybulb.com).
 
 ## The data source
 
 Craigslist publishes no API, but its own site fetches search results from an
-undocumented JSON endpoint, `sapi.craigslist.org/web/v8/postings`. Curbfind
+undocumented JSON endpoint, `sapi.craigslist.org/web/v8/postings`. Scrounge
 reads that endpoint directly rather than scraping HTML, because HTML changes
 its markup far more often than a JSON contract changes its shape. Two
 upstream quirks shape the design:
@@ -47,7 +47,7 @@ a security surface, not a formatting nicety.
 ## Storage
 
 Favourites live in `localStorage` on the web and `UserDefaults` natively.
-Nothing is sent anywhere, because a list of saved postings isn't Curbfind's
+Nothing is sent anywhere, because a list of saved postings isn't Scrounge's
 data to collect: there's no account, so no server has anywhere to put it
 even if it wanted to. The Worker holds only area ids.
 

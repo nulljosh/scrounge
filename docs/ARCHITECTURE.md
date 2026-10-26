@@ -4,7 +4,7 @@ Craigslist browser stripped of clutter. Web (Cloudflare Worker), iOS/macOS (nati
 
 ## How it runs
 
-**Web:** User navigates to curbfind.heyitsmejosh.com, gets static HTML from a Cloudflare Page. `onboarding.js` loads the UI. A search fires a fetch to the worker at `/api/search` with query params (city, category, sort, filters). The worker translates that to Craigslist's undocumented sapi endpoint, caches responses for five minutes in Workers KV, and applies `rankByDeal` + AI deal reasons if sort=deal before returning JSON.
+**Web:** User navigates to scrounge.jaybulb.com, gets static HTML from a Cloudflare Page. `onboarding.js` loads the UI. A search fires a fetch to the worker at `/api/search` with query params (city, category, sort, filters). The worker translates that to Craigslist's undocumented sapi endpoint, caches responses for five minutes in Workers KV, and applies `rankByDeal` + AI deal reasons if sort=deal before returning JSON.
 
 **iOS/macOS:** App launches, creates a `SearchModel`. User enters filters and searches. `SearchFilters.city` is resolved to a Craigslist area ID via `AreaDirectory`, which caches these forever (they never change). `CraigslistAPI.search()` builds a request to `sapi.craigslist.org/web/v8/postings` and calls `decodeSearch()` to turn positional arrays into real `Listing` objects. For "best deals" sort, the app calls `searchDeals()` instead, which routes through the worker for AI ranking.
 
@@ -27,7 +27,7 @@ Craigslist's sapi returns search results as positional arrays indexed against a 
 
 | File | What it owns |
 |---|---|
-| `Sources/iOS/CurbfindApp.swift` + `Sources/macOS/CurbfindMacApp.swift` | Entry points. Sets up a `Favorites` environment object for persistence across navigation. iOS: TabView with "Browse" (search) and "Saved" tabs. macOS: single window with the same two tabs. |
+| `Sources/iOS/ScroungeApp.swift` + `Sources/macOS/ScroungeMacApp.swift` | Entry points. Sets up a `Favorites` environment object for persistence across navigation. iOS: TabView with "Browse" (search) and "Saved" tabs. macOS: single window with the same two tabs. |
 | `Sources/Views/ResultsList.swift` | Reusable results grid for both browse and saved tabs. Calls `model.run()` on task load. Formats each result as a row thumbnail, price, title, location. Links to `ListingDetailView`. Filters by `savedOnly` parameter. |
 | `Sources/Views/ListingRow.swift` | Single result row: thumbnail, price badge, title, location, posted date. Tap navigates to detail. |
 | `Sources/Views/ListingDetailView.swift` | Full listing detail. Carousel of images, title, price, posting date, location with map pin, listing attributes (bedrooms, etc.), full body text (plain text from `CraigslistAPI.sanitize`), "Open in Craigslist" link, save/unsave button. |
@@ -46,7 +46,7 @@ Craigslist's sapi returns search results as positional arrays indexed against a 
 | `web/onboarding.js` | Search form logic: text input, category/sort/filter pickers. Calls `fetch(/api/search?...)` and renders results. Clicking a result navigates to the detail page (Craigslist's own `/view/d/` URL). |
 | `web/sw.js` | Service worker. Installed but not strictly needed (the worker's own cache-control header handles persistence). Left in place for future local-first enhancements. |
 | `docs/index.html` | Landing page wrapper with device frame injection. Embeds the live app inside an iPhone/Android/Mac window frame. One click zooms to full screen. |
-| `docs/devices.css` + `docs/tokens.css` | Styling for the device frames and app UI. Light theme with the Curbfind brand colors. |
+| `docs/devices.css` + `docs/tokens.css` | Styling for the device frames and app UI. Light theme with the Scrounge brand colors. |
 
 ## TUI
 
@@ -69,7 +69,7 @@ Craigslist's sapi returns search results as positional arrays indexed against a 
 | File | What it owns |
 |---|---|
 | `worker/decode.test.mjs` + `worker/worker.test.mjs` + `worker/deal.test.mjs` | JavaScript test suites for the worker. `decode.test.mjs` verifies `decodeSearch` and `decodeItem` against `worker/fixtures/search.json`. `deal.test.mjs` tests `rankByDeal()` and `addDealReasons()` against varied price/title inputs. `worker.test.mjs` integration tests the full worker. Run with `node --test`. |
-| `scripts/build-site.sh` | Build script for the web landing page. Inlines the Curbfind app into the device frame HTML. |
+| `scripts/build-site.sh` | Build script for the web landing page. Inlines the Scrounge app into the device frame HTML. |
 | `docs/privacy.html` | Privacy policy served at `/privacy`. |
 
 ## External services

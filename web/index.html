@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Curbfind</title>
-<meta name="description" content="Curbfind is a faster way to browse Craigslist: one photo grid, any of 700 cities, save what you're watching. Free.">
-<link rel="canonical" href="https://curbfind.jaybulb.com/">
+<title>Scrounge</title>
+<meta name="description" content="Scrounge is a faster way to browse Craigslist: one photo grid, any of 700 cities, save what you're watching. Free.">
+<link rel="canonical" href="https://scrounge.jaybulb.com/">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="stylesheet" href="tokens.css">
 <style>
-/* Curbfind: its own mark, not the Jaybulb yellow. Curb blue,
+/* Scrounge: its own mark, not the Jaybulb yellow. Curb blue,
    a torn-corner card, everything else inherited from tokens.css. */
 :root{--curb:#0044cc;--curb-deep:#002f8f;--bulb:#0044cc;--bulb-deep:#002f8f;--color-hairline:#d9e1f5;--border:#d9e1f5;--color-underline:#0044cc;--color-underline-hover:#002f8f;}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bulb:#5b8cff;--bulb-deep:#5b8cff;--color-hairline:rgba(91,140,255,.25);--border:rgba(91,140,255,.25);--color-underline:#5b8cff;--color-underline-hover:#5b8cff;}}
@@ -61,21 +61,21 @@ footer{padding:18px 16px;border-top:1px solid var(--border);font-size:13px;color
 footer a{color:inherit}
 </style>
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://curbfind.jaybulb.com/og.png">
+    <meta property="og:image" content="https://scrounge.jaybulb.com/og.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Curbfind">
-    <meta property="og:title" content="Curbfind">
-    <meta property="og:description" content="Curbfind is a faster way to browse Craigslist: one photo grid, any of 700 cities, save what you're watching. Free.">
-    <meta property="og:url" content="https://curbfind.jaybulb.com/">
+    <meta property="og:site_name" content="Scrounge">
+    <meta property="og:title" content="Scrounge">
+    <meta property="og:description" content="Scrounge is a faster way to browse Craigslist: one photo grid, any of 700 cities, save what you're watching. Free.">
+    <meta property="og:url" content="https://scrounge.jaybulb.com/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Curbfind">
-    <meta name="twitter:description" content="Curbfind is a faster way to browse Craigslist: one photo grid, any of 700 cities, save what you're watching. Free.">
-    <meta name="twitter:image" content="https://curbfind.jaybulb.com/og.png">
+    <meta name="twitter:title" content="Scrounge">
+    <meta name="twitter:description" content="Scrounge is a faster way to browse Craigslist: one photo grid, any of 700 cities, save what you're watching. Free.">
+    <meta name="twitter:image" content="https://scrounge.jaybulb.com/og.png">
   </head>
 <body>
 <header>
-  <p class="brand"><b>Curbfind</b></p>
+  <p class="brand"><b>Scrounge</b></p>
   <p class="tagline">Browse Craigslist listings without the clutter. Search, filter, and save the ones worth a second look.</p>
   <form id="f">
     <input id="q" name="q" placeholder="Search listings" aria-label="Search listings">
@@ -121,7 +121,7 @@ footer a{color:inherit}
 </dialog>
 
 <footer>
-  Curbfind reads public classifieds listings. It is not affiliated with, endorsed by, or
+  Scrounge reads public classifieds listings. It is not affiliated with, endorsed by, or
   connected to craigslist. Replying to a posting opens the original site.
 </footer>
 
@@ -332,11 +332,11 @@ if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catc
 <script>
     // First-run onboarding. Shows once, right after registration.
     Onboarding.start({
-        key: "curbfind",
+        key: "scrounge",
         finishLabel: "Get started",
         slides: [
                 { title: "Craigslist, made searchable",
-                  body: "Curbfind sweeps listings across cities and puts them in one clean, fast list.",
+                  body: "Scrounge sweeps listings across cities and puts them in one clean, fast list.",
                   art: "<svg width=\"120\" height=\"120\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM21 21l-4.3-4.3\"/></svg>" },
                 { title: "Spot the real deals",
                   body: "Prices are ranked against what the same thing usually goes for, so bargains stand out.",

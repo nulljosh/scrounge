@@ -1,6 +1,6 @@
 // ponytail: network-first for every same-origin GET, cache only as an offline
 // fallback. Nothing here is content-hashed, so cache-first would pin stale files.
-const CACHE = "curbfind-v2";
+const CACHE = "scrounge-v2";
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(["./", "./tokens.css"])).then(() => self.skipWaiting()));
 });

@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05C41A47E8FEFB5392CCBE52 /* search-fixture.json in Resources */ = {isa = PBXBuildFile; fileRef = 6D96C41A83E7399FBF9AD2BA /* search-fixture.json */; };
+		0AA6136A97CE74A2F29DA5C6 /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7CCE9CCBD6E9B85EDBB57F /* FiltersView.swift */; };
+		0E429C491C035C5DEE98BD48 /* CraigslistAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860184D1727C64ED3EA6D1B /* CraigslistAPI.swift */; };
+		1283859E434E670FFD11329D /* ScroungeMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6146BE225E7E4CD454EEE380 /* ScroungeMacApp.swift */; };
+		1A5308D6A89427B97D584B16 /* CraigslistAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF67C0FA772CE3B186535EA /* CraigslistAPITests.swift */; };
+		2F84842572AC0CB874F7BCEF /* ListingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADF992B94AAEC672B71D204 /* ListingRow.swift */; };
+		34CDD49ACDB448E96C209742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04548E0EA3EEE84EA8764495 /* Assets.xcassets */; };
+		406D92AD723BD021F0A377AE /* Scrounge.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 1F25D6B6D9747A7C7049C162 /* Scrounge.entitlements */; };
+		53CEE9CA5DD78F6B47359F7F /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A72406A848149AAC4705B1 /* Listing.swift */; };
+		54BD659CC6F9BC393DE7B75D /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7CCE9CCBD6E9B85EDBB57F /* FiltersView.swift */; };
+		5A6C2EC962DDE50DBC3E7A02 /* ListingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADF992B94AAEC672B71D204 /* ListingRow.swift */; };
+		5DE5EFDE69E658D92011A2AE /* search-fixture.json in Resources */ = {isa = PBXBuildFile; fileRef = 6D96C41A83E7399FBF9AD2BA /* search-fixture.json */; };
+		9BE3EC8D24E7460B297A1C6D /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA33490482CC19271BE3E33 /* Cities.swift */; };
+		9C2E0FA09A687750792057C1 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0364E4B9621325F6FEBA9687 /* Favorites.swift */; };
+		B0284D4C0923D71F67C677C5 /* ListingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01F772C21BA5E9E81C2B6E /* ListingDetailView.swift */; };
+		B23F7618722FB5F22EE6D36E /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A72406A848149AAC4705B1 /* Listing.swift */; };
+		B401FB612D2465B6A7647624 /* ScroungeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B88008E83920670B019F70 /* ScroungeApp.swift */; };
+		B5C7DE17F236A4EBE3C162EA /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA33490482CC19271BE3E33 /* Cities.swift */; };
+		B917DE7CDEEFF681C3792F3C /* search-fixture.json in Resources */ = {isa = PBXBuildFile; fileRef = 6D96C41A83E7399FBF9AD2BA /* search-fixture.json */; };
+		BAB83C9A6988CCBE2592E178 /* NearMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C81A04EDBAF653CD481ED1B /* NearMe.swift */; };
+		BC5504B4190CE82ADB5563D4 /* NearMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C81A04EDBAF653CD481ED1B /* NearMe.swift */; };
+		C3A69092EA2DB8C212FA506D /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0364E4B9621325F6FEBA9687 /* Favorites.swift */; };
+		D038C97BCFBE8C0F1C09DF4B /* CraigslistAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860184D1727C64ED3EA6D1B /* CraigslistAPI.swift */; };
+		E39DCC7D3828F8AF42EAA7CE /* ResultsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AB08B840307C65718636F /* ResultsList.swift */; };
+		F24151ED4F2BEBA3ACF892EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04548E0EA3EEE84EA8764495 /* Assets.xcassets */; };
+		F271AE5BD44E905374AB063A /* ListingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01F772C21BA5E9E81C2B6E /* ListingDetailView.swift */; };
+		F58E8FE5A879D879E7330847 /* ResultsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277AB08B840307C65718636F /* ResultsList.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		520C8D9E5D04AD75A62F978C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17207FBC93C387230AC3209A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D19B2B43E527C88411B392A;
+			remoteInfo = Scrounge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0364E4B9621325F6FEBA9687 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		04548E0EA3EEE84EA8764495 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1C7CCE9CCBD6E9B85EDBB57F /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
+		1F25D6B6D9747A7C7049C162 /* Scrounge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Scrounge.entitlements; sourceTree = "<group>"; };
+		277AB08B840307C65718636F /* ResultsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsList.swift; sourceTree = "<group>"; };
+		35425A5B4AC28AC1C13FE086 /* ScroungeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScroungeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ADF992B94AAEC672B71D204 /* ListingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingRow.swift; sourceTree = "<group>"; };
+		5860184D1727C64ED3EA6D1B /* CraigslistAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraigslistAPI.swift; sourceTree = "<group>"; };
+		5C81A04EDBAF653CD481ED1B /* NearMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMe.swift; sourceTree = "<group>"; };
+		6146BE225E7E4CD454EEE380 /* ScroungeMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScroungeMacApp.swift; sourceTree = "<group>"; };
+		6D96C41A83E7399FBF9AD2BA /* search-fixture.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "search-fixture.json"; sourceTree = "<group>"; };
+		700E5771984DB91BCEC13655 /* Scrounge-iOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "Scrounge-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		776F93F2B585873684180314 /* Scrounge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrounge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DF67C0FA772CE3B186535EA /* CraigslistAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraigslistAPITests.swift; sourceTree = "<group>"; };
+		B4B88008E83920670B019F70 /* ScroungeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScroungeApp.swift; sourceTree = "<group>"; };
+		BB01F772C21BA5E9E81C2B6E /* ListingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailView.swift; sourceTree = "<group>"; };
+		E8A72406A848149AAC4705B1 /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		FDA33490482CC19271BE3E33 /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		05613731A93590324F01D572 = {
+			isa = PBXGroup;
+			children = (
+				0562139739FB27B678836E17 /* iOS */,
+				2EE67C8F67DADA51C4A35037 /* Resources */,
+				6EB25CAE218B560C6BCFEBE7 /* Sources */,
+				E8B007908B883952C0E14F88 /* Tests */,
+				BA5BF86524B89760A5C0786C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0562139739FB27B678836E17 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B4B88008E83920670B019F70 /* ScroungeApp.swift */,
+			);
+			name = iOS;
+			path = Sources/iOS;
+			sourceTree = "<group>";
+		};
+		16B87AC75E4441D4BBC0FAFC /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				6146BE225E7E4CD454EEE380 /* ScroungeMacApp.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		1B0CCE63CC64A503E7FFDD34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDA33490482CC19271BE3E33 /* Cities.swift */,
+				5860184D1727C64ED3EA6D1B /* CraigslistAPI.swift */,
+				0364E4B9621325F6FEBA9687 /* Favorites.swift */,
+				E8A72406A848149AAC4705B1 /* Listing.swift */,
+				5C81A04EDBAF653CD481ED1B /* NearMe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2EE67C8F67DADA51C4A35037 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04548E0EA3EEE84EA8764495 /* Assets.xcassets */,
+				1F25D6B6D9747A7C7049C162 /* Scrounge.entitlements */,
+				6D96C41A83E7399FBF9AD2BA /* search-fixture.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6EB25CAE218B560C6BCFEBE7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				16B87AC75E4441D4BBC0FAFC /* macOS */,
+				1B0CCE63CC64A503E7FFDD34 /* Models */,
+				9AB423884D5C22C498A9C27D /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		9AB423884D5C22C498A9C27D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C7CCE9CCBD6E9B85EDBB57F /* FiltersView.swift */,
+				BB01F772C21BA5E9E81C2B6E /* ListingDetailView.swift */,
+				4ADF992B94AAEC672B71D204 /* ListingRow.swift */,
+				277AB08B840307C65718636F /* ResultsList.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BA5BF86524B89760A5C0786C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				700E5771984DB91BCEC13655 /* Scrounge-iOS.app */,
+				776F93F2B585873684180314 /* Scrounge.app */,
+				35425A5B4AC28AC1C13FE086 /* ScroungeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E8B007908B883952C0E14F88 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7DF67C0FA772CE3B186535EA /* CraigslistAPITests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D19B2B43E527C88411B392A /* Scrounge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D683BFC15FE19201F0549056 /* Build configuration list for PBXNativeTarget "Scrounge" */;
+			buildPhases = (
+				EF8AA596B719198526C90940 /* Sources */,
+				43612391427DB20982862A4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Scrounge;
+			packageProductDependencies = (
+			);
+			productName = Scrounge;
+			productReference = 776F93F2B585873684180314 /* Scrounge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9CEDCE3F23B4C8B8F7243A63 /* Scrounge-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B13BA8F468211C8FEDDDD5E /* Build configuration list for PBXNativeTarget "Scrounge-iOS" */;
+			buildPhases = (
+				84D9C7522436D9055DDE92A8 /* Sources */,
+				154A023DF0CE7F03A082D038 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Scrounge-iOS";
+			packageProductDependencies = (
+			);
+			productName = "Scrounge-iOS";
+			productReference = 700E5771984DB91BCEC13655 /* Scrounge-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F64B7986641378C7E2A431D6 /* ScroungeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD445B471419FA9056F3B886 /* Build configuration list for PBXNativeTarget "ScroungeTests" */;
+			buildPhases = (
+				3B0D354719615651B3832B76 /* Sources */,
+				548C70CF9706EB377C27346D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5FDDF6C140BEC0580BCF089 /* PBXTargetDependency */,
+			);
+			name = ScroungeTests;
+			packageProductDependencies = (
+			);
+			productName = ScroungeTests;
+			productReference = 35425A5B4AC28AC1C13FE086 /* ScroungeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17207FBC93C387230AC3209A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					4D19B2B43E527C88411B392A = {
+						DevelopmentTeam = QMM486NPYC;
+					};
+					9CEDCE3F23B4C8B8F7243A63 = {
+						DevelopmentTeam = QMM486NPYC;
+					};
+					F64B7986641378C7E2A431D6 = {
+						DevelopmentTeam = QMM486NPYC;
+					};
+				};
+			};
+			buildConfigurationList = B67DB6C5C638801C6C4E3EF0 /* Build configuration list for PBXProject "Scrounge" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 05613731A93590324F01D572;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = BA5BF86524B89760A5C0786C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D19B2B43E527C88411B392A /* Scrounge */,
+				9CEDCE3F23B4C8B8F7243A63 /* Scrounge-iOS */,
+				F64B7986641378C7E2A431D6 /* ScroungeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		154A023DF0CE7F03A082D038 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34CDD49ACDB448E96C209742 /* Assets.xcassets in Resources */,
+				05C41A47E8FEFB5392CCBE52 /* search-fixture.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43612391427DB20982862A4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24151ED4F2BEBA3ACF892EE /* Assets.xcassets in Resources */,
+				406D92AD723BD021F0A377AE /* Scrounge.entitlements in Resources */,
+				B917DE7CDEEFF681C3792F3C /* search-fixture.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		548C70CF9706EB377C27346D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DE5EFDE69E658D92011A2AE /* search-fixture.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B0D354719615651B3832B76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A5308D6A89427B97D584B16 /* CraigslistAPITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84D9C7522436D9055DDE92A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5C7DE17F236A4EBE3C162EA /* Cities.swift in Sources */,
+				D038C97BCFBE8C0F1C09DF4B /* CraigslistAPI.swift in Sources */,
+				9C2E0FA09A687750792057C1 /* Favorites.swift in Sources */,
+				54BD659CC6F9BC393DE7B75D /* FiltersView.swift in Sources */,
+				53CEE9CA5DD78F6B47359F7F /* Listing.swift in Sources */,
+				B0284D4C0923D71F67C677C5 /* ListingDetailView.swift in Sources */,
+				5A6C2EC962DDE50DBC3E7A02 /* ListingRow.swift in Sources */,
+				BAB83C9A6988CCBE2592E178 /* NearMe.swift in Sources */,
+				E39DCC7D3828F8AF42EAA7CE /* ResultsList.swift in Sources */,
+				B401FB612D2465B6A7647624 /* ScroungeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF8AA596B719198526C90940 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BE3EC8D24E7460B297A1C6D /* Cities.swift in Sources */,
+				0E429C491C035C5DEE98BD48 /* CraigslistAPI.swift in Sources */,
+				C3A69092EA2DB8C212FA506D /* Favorites.swift in Sources */,
+				0AA6136A97CE74A2F29DA5C6 /* FiltersView.swift in Sources */,
+				B23F7618722FB5F22EE6D36E /* Listing.swift in Sources */,
+				F271AE5BD44E905374AB063A /* ListingDetailView.swift in Sources */,
+				2F84842572AC0CB874F7BCEF /* ListingRow.swift in Sources */,
+				BC5504B4190CE82ADB5563D4 /* NearMe.swift in Sources */,
+				F58E8FE5A879D879E7330847 /* ResultsList.swift in Sources */,
+				1283859E434E670FFD11329D /* ScroungeMacApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5FDDF6C140BEC0580BCF089 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D19B2B43E527C88411B392A /* Scrounge */;
+			targetProxy = 520C8D9E5D04AD75A62F978C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		251D1072ADDB58E043AA6E4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nulljosh.ScroungeTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scrounge.app/Contents/MacOS/Scrounge";
+			};
+			name = Debug;
+		};
+		2B631F903F320C8D992F79CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Resources/Scrounge.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Scrounge uses your location once to find the nearest city. It never leaves your device.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nulljosh.curbside;
+				PRODUCT_NAME = Scrounge;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4767E4EA10252BF14ED0A77E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nulljosh.ScroungeTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scrounge.app/Contents/MacOS/Scrounge";
+			};
+			name = Release;
+		};
+		515975F8A4410105B9020381 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Resources/Scrounge.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationUsageDescription = "Scrounge uses your location once to find the nearest city. It never leaves your device.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nulljosh.curbside;
+				PRODUCT_NAME = Scrounge;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		57D0CB133CAE0BC774BE9907 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 202610052105;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = QMM486NPYC;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		60FD2FAFD669B00060E32570 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 202610052105;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = QMM486NPYC;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		689C3DCFCA38B1B61965D04F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Scrounge-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Scrounge-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nulljosh.curbside;
+				PRODUCT_NAME = Scrounge;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E84B07ABC24BC3A967C57C18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Scrounge-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Scrounge-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nulljosh.curbside;
+				PRODUCT_NAME = Scrounge;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B13BA8F468211C8FEDDDD5E /* Build configuration list for PBXNativeTarget "Scrounge-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E84B07ABC24BC3A967C57C18 /* Debug */,
+				689C3DCFCA38B1B61965D04F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B67DB6C5C638801C6C4E3EF0 /* Build configuration list for PBXProject "Scrounge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60FD2FAFD669B00060E32570 /* Debug */,
+				57D0CB133CAE0BC774BE9907 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CD445B471419FA9056F3B886 /* Build configuration list for PBXNativeTarget "ScroungeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				251D1072ADDB58E043AA6E4B /* Debug */,
+				4767E4EA10252BF14ED0A77E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D683BFC15FE19201F0549056 /* Build configuration list for PBXNativeTarget "Scrounge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				515975F8A4410105B9020381 /* Debug */,
+				2B631F903F320C8D992F79CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17207FBC93C387230AC3209A /* Project object */;
+}

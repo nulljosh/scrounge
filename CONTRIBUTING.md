@@ -1,10 +1,10 @@
-# Contributing to curbfind
+# Contributing to scrounge
 
 ## Setup
 
 ```
-git clone https://github.com/nulljosh/curbfind.git
-cd curbfind
+git clone https://github.com/nulljosh/scrounge.git
+cd scrounge
 npm install
 ```
 

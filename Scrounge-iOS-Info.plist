@@ -23,7 +23,7 @@
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Curbfind uses your location once to find the nearest city. It never leaves your device.</string>
+	<string>Scrounge uses your location once to find the nearest city. It never leaves your device.</string>
 	<key>UILaunchScreen</key>
 	<dict/>
 	<key>UISupportedInterfaceOrientations</key>
