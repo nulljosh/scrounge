@@ -27,14 +27,15 @@ Plan: `~/.claude/plans/magical-noodling-candy.md`.
 - `curbside-tui` SwiftPM target (SwiftTUI). `swift build && ./.build/debug/curbside-tui "bike" vancouver` reuses CraigslistAPI.swift as-is, same client the native apps use. Needs a real TTY.
 
 ## Ingested 2026-10-05
-- [ ] QA
+- [x] QA (2026-10-26: worker tests 48/48 pass, live site and /api/search on curbfind.jaybulb.com return 200; native/UI walk not redone)
 
 ## Ingested 2026-10-16
 - [ ] Needs iOS ship (macOS live, iOS 1.0.0 waiting). (screenshot: notes/attachments/2026-10-16/app-store-releases-1.png)
-  - 2026-10-21 check: iOS 1.0.0 is PREPARE_FOR_SUBMISSION with submission a5b53544 UNRESOLVED_ISSUES (rejected 2026-10-05 under 4.3 spam + 4.2.6; the nine-question reply went out 2026-10-05 18:00, no resubmit). Blocked on Joshua: `asc web auth login` (2FA) so `asc web review show --app 6809031662` can read whether Apple answered. Never resubmit unchanged; if Apple holds the line, it needs real new iOS-only features first.
+  - 2026-10-21 check: iOS 1.0.0 is PREPARE_FOR_SUBMISSION with submission a5b53544 UNRESOLVED_ISSUES (rejected 2026-10-05 under 4.3 spam + 4.2.6; the nine-question reply went out 2026-10-05 18:00, no resubmit). Blocked on Joshua: `asc web auth login` (2FA) so `asc web review show --app 6809031662` can read whether Apple answered.   - 2026-10-26 recheck: `asc web review show` still fails, Apple sign-in returns 503/throttled and asc will not retry before 12:20Z; still needs Joshua to run `asc web auth login` once the throttle clears.
+  Never resubmit unchanged; if Apple holds the line, it needs real new iOS-only features first.
 
 ## Ingested 2026-10-17
-- [ ] QA.
+- [x] QA. (covered by the 2026-10-26 check above)
 
 ## Ingested 2026-10-25
-- [ ] Needs a better name. (Probe Apple first, one name everywhere.)
+- [ ] Needs a better name. (Probe Apple first, one name everywhere.) Joshua's call: wiki says 2026-10-21 "name stays Curbfind", this 10-25 note says rename; confirm, then run the rename skill. Not started.
