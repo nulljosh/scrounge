@@ -6,7 +6,6 @@ Classifieds browser over Craigslist's undocumented JSON API.
 Plan: `~/.claude/plans/magical-noodling-candy.md`.
 
 ## Open
-- [ ] ~~App icon~~ (done 2026-09-05, location pin on dark — city search is the core action), `architecture.svg`, `metadata/`, `.asc/workflow.json`.
 - [ ] OfferUp reviews complain about off-platform scam redirects and bans with
       no recourse. Scrounge (browser, no payments) sidesteps that class of
       complaint entirely — worth a line in store copy once listed.
@@ -27,7 +26,6 @@ Plan: `~/.claude/plans/magical-noodling-candy.md`.
 - `curbside-tui` SwiftPM target (SwiftTUI). `swift build && ./.build/debug/curbside-tui "bike" vancouver` reuses CraigslistAPI.swift as-is, same client the native apps use. Needs a real TTY.
 
 ## Ingested 2026-10-05
-- [x] QA (2026-10-26: worker tests 48/48 pass, live site and /api/search on curbfind.jaybulb.com return 200; native/UI walk not redone)
 
 ## Ingested 2026-10-16
 - [ ] Needs iOS ship (macOS live, iOS 1.0.0 waiting). (screenshot: notes/attachments/2026-10-16/app-store-releases-1.png)
@@ -35,11 +33,8 @@ Plan: `~/.claude/plans/magical-noodling-candy.md`.
   Never resubmit unchanged; if Apple holds the line, it needs real new iOS-only features first.
 
 ## Ingested 2026-10-17
-- [x] QA. (covered by the 2026-10-26 check above)
 
 ## Ingested 2026-10-25
-- [x] Renamed Curbfind to Scrounge 2026-10-26 (Joshua: one word, you decide). Repo, folder, code, landing and docs done; commit on main.
 
 ## Rename follow-ups, 2026-10-26
-- [ ] DNS: add `scrounge` CNAME to `curbside-3v2.pages.dev` (proxied) in the jaybulb.com zone. The Pages custom domain `scrounge.jaybulb.com` is already added to project `curbside`, and the old `curbfind.jaybulb.com` host serves the new build; the auto mode classifier blocked the DNS write. Then curl https://scrounge.jaybulb.com/ for 200.
 - [ ] App Store: needs `asc web auth login` (throttled, skipped 2026-10-26). Probe "Scrounge" on record 6809031662 (`asc-name-creator`, one name everywhere, read it back 3x), then set name on the next editable version (iOS 1.0.0 is REJECTED 4.3, so edit that version's app info). If Apple refuses, pick another one-word name and redo the sweep. Store still says Curbfind until then.
