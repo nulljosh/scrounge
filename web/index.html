@@ -38,6 +38,7 @@
     <button type="button" id="toggle" aria-expanded="false">Filters</button>
     <button type="button" id="nearme">Near me</button>
     <button type="button" id="favbtn" aria-pressed="false">Saved</button>
+    <button type="button" id="mapbtn" aria-pressed="false">Map</button>
     <div class="more-filters" id="filters" hidden>
       <input class="narrow" id="min_price" type="number" min="0" placeholder="Min $" aria-label="Minimum price">
       <input class="narrow" id="max_price" type="number" min="0" placeholder="Max $" aria-label="Maximum price">
@@ -62,6 +63,7 @@
   <ul class="strip" id="recentlist"></ul>
 </section>
 <p id="status">Search to begin.</p>
+<div id="map" class="minimap" hidden></div>
 <ul id="grid"></ul>
 <button id="more" hidden>Show more</button>
 
@@ -219,12 +221,63 @@ function card(item) {
   return li;
 }
 
+// Static map of the shown results from OpenStreetMap tiles: plain images, no map library.
+// Zoom is the closest that fits every pin in ~280x200 (a phone); a 7x3 tile grid covers any box
+// up to 1536px wide.
+const T = 256;
+const project = (lat, lon, z) => {
+  const n = 2 ** z * T, r = (lat * Math.PI) / 180;
+  return [((lon + 180) / 360) * n, ((1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2) * n];
+};
+function drawMap() {
+  const box = $("map");
+  box.hidden = $("mapbtn").getAttribute("aria-pressed") !== "true";
+  const items = results.slice(0, shown).filter((it) => it.lat != null && it.lon != null);
+  if (box.hidden || !items.length) return box.replaceChildren();
+  let z = 15, pts;
+  for (; z > 3; z--) {
+    pts = items.map((it) => project(it.lat, it.lon, z));
+    const xs = pts.map((p) => p[0]), ys = pts.map((p) => p[1]);
+    if (Math.max(...xs) - Math.min(...xs) <= 280 && Math.max(...ys) - Math.min(...ys) <= 200) break;
+  }
+  pts = items.map((it) => project(it.lat, it.lon, z));
+  const xs = pts.map((p) => p[0]), ys = pts.map((p) => p[1]);
+  const cx = (Math.min(...xs) + Math.max(...xs)) / 2, cy = (Math.min(...ys) + Math.max(...ys)) / 2;
+  const gx = (Math.floor(cx / T) - 3) * T, gy = (Math.floor(cy / T) - 1) * T;
+  const grid = document.createElement("div");
+  grid.className = "tiles";
+  grid.style.left = `calc(50% - ${cx - gx}px)`;
+  grid.style.top = `calc(50% - ${cy - gy}px)`;
+  for (let ty = gy / T; ty < gy / T + 3; ty++)
+    for (let tx = gx / T; tx < gx / T + 7; tx++) {
+      const img = new Image(T, T);
+      img.src = `https://tile.openstreetmap.org/${z}/${tx}/${ty}.png`;
+      img.alt = "";
+      img.style.left = `${tx * T - gx}px`; img.style.top = `${ty * T - gy}px`;
+      grid.append(img);
+    }
+  items.forEach((it, i) => {
+    const pin = document.createElement("button");
+    pin.type = "button";
+    pin.className = "pin";
+    pin.title = pin.ariaLabel = [it.priceString, it.title].filter(Boolean).join(" · ");
+    pin.style.left = `${pts[i][0] - gx}px`; pin.style.top = `${pts[i][1] - gy}px`;
+    pin.addEventListener("click", () => showDetail(it));
+    grid.append(pin);
+  });
+  const credit = document.createElement("span");
+  credit.className = "credit";
+  credit.textContent = "© OpenStreetMap";
+  box.replaceChildren(grid, credit);
+}
+
 function render(items, reset) {
   if (reset) { grid.replaceChildren(); shown = 0; results = items; }
   const next = results.slice(shown, shown + PAGE);
   for (const it of next) grid.append(card(it));
   shown += next.length;
   $("more").hidden = shown >= results.length;
+  drawMap();
 }
 
 async function showDetail(item) {
@@ -264,6 +317,11 @@ $("toggle").addEventListener("click", () => {
   const open = $("filters").hidden;
   $("filters").hidden = !open;
   $("toggle").setAttribute("aria-expanded", String(open));
+});
+
+$("mapbtn").addEventListener("click", () => {
+  $("mapbtn").setAttribute("aria-pressed", String($("mapbtn").getAttribute("aria-pressed") !== "true"));
+  drawMap();
 });
 
 $("favbtn").addEventListener("click", () => {
