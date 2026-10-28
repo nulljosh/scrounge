@@ -20,6 +20,29 @@ struct ResultsList: View {
             }
         }
         .overlay { statusOverlay }
+        .safeAreaInset(edge: .top) { if savedOnly == nil { categoryChips } }
+    }
+
+    private var categoryChips: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 8) {
+                ForEach(Category.all) { cat in
+                    if model.filters.category == cat.id {
+                        Button(cat.name) {}.buttonStyle(.borderedProminent)
+                    } else {
+                        Button(cat.name) {
+                            model.filters.category = cat.id
+                            Task { await model.run() }
+                        }
+                        .buttonStyle(.bordered)
+                    }
+                }
+            }
+            .buttonBorderShape(.capsule)
+            .padding(.horizontal)
+            .padding(.vertical, 8)
+        }
+        .background(.bar)
     }
 
     private func row(_ listing: Listing) -> some View {

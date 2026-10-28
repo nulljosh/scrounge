@@ -23,6 +23,13 @@ struct ListingDetailView: View {
             .frame(maxWidth: 700, alignment: .leading)
         }
         .navigationTitle(listing.title)
+        .toolbar {
+            ToolbarItem {
+                if let link = detail?.url ?? listing.url {
+                    ShareLink(item: link, subject: Text(listing.title))
+                }
+            }
+        }
         .task { await load() }
     }
 

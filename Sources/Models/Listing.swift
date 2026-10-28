@@ -40,12 +40,11 @@ struct Category: Identifiable, Hashable {
     // abbreviations have been stable for two decades. Each one verified live.
     static let all: [Category] = [
         .init(id: "sss", name: "For sale"),
+        .init(id: "cta", name: "Cars & trucks"),
         .init(id: "hhh", name: "Housing"),
-        .init(id: "apa", name: "Apartments / housing"),
-        .init(id: "bbb", name: "Jobs (all)"),
+        .init(id: "apa", name: "Apartments"),
         .init(id: "jjj", name: "Jobs"),
         .init(id: "ggg", name: "Gigs"),
-        .init(id: "cta", name: "Cars & trucks"),
         .init(id: "ccc", name: "Community"),
         .init(id: "rrr", name: "Resumes"),
     ]

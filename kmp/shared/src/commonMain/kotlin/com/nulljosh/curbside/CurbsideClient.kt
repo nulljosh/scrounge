@@ -49,9 +49,8 @@ data class SearchFilters(
 data class SearchResult(val items: List<Listing>, val total: Int, val cityName: String?)
 
 val CATEGORIES = listOf(
-    "sss" to "For sale", "hhh" to "Housing", "apa" to "Apartments / housing",
-    "bbb" to "Jobs (all)", "jjj" to "Jobs", "ggg" to "Gigs",
-    "cta" to "Cars & trucks", "ccc" to "Community", "rrr" to "Resumes",
+    "sss" to "For sale", "cta" to "Cars & trucks", "hhh" to "Housing", "apa" to "Apartments",
+    "jjj" to "Jobs", "ggg" to "Gigs", "ccc" to "Community", "rrr" to "Resumes",
 )
 
 /**

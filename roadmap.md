@@ -47,8 +47,8 @@ Skipped: chat, payments, seller profiles, shipping (Scrounger is a browser, not 
 |---|---|---|---|
 | House UI: capsule controls, rounded photo cards, light and dark | all | S | done 2026-10-28 (web) |
 | Hide repeat reposts in results | OfferUp, Marketplace | S | done 2026-10-28 (web) |
-| Category chips under search instead of a select | OfferUp, Marketplace, Vinted | S | open |
-| Share a listing (native share sheet) | all | S | open |
+| Category chips under search instead of a select | OfferUp, Marketplace, Vinted | S | done 2026-10-28 (web, iOS, macOS; KMP has no category UI yet) |
+| Share a listing (native share sheet) | all | S | done 2026-10-28 (web, iOS, macOS) |
 | Recently viewed row | Mercari, Petco, Marketplace | S | open |
 | Saved searches with "new since last look" counts | OfferUp, Mercari, Kijiji | M | open |
 | Map view of results | Marketplace, Kijiji | M | open |
