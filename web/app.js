@@ -18,8 +18,33 @@ const favs = {
   has(id) { return id in this.all; },
   toggle(item) {
     if (this.has(item.id)) delete this.all[item.id]; else this.all[item.id] = item;
-    localStorage.setItem("curbside:favs", JSON.stringify(this.all));
+    this.store();
     return this.has(item.id);
+  },
+  store() { localStorage.setItem("curbside:favs", JSON.stringify(this.all)); },
+  // Re-read each saved post's live price, oldest check first. A drop keeps the first price
+  // seen as `was`; a 404 means the seller took it down. ponytail: 30 per open, one at a time,
+  // so a long Saved list costs a few seconds, not a burst against the worker's rate limit.
+  async recheck() {
+    let changed = false;
+    for (const it of Object.values(this.all).sort((a, b) => (a.checked || 0) - (b.checked || 0)).slice(0, 30)) {
+      try {
+        const r = await fetch(`${API}/api/post/${encodeURIComponent(it.uuid)}`);
+        if (r.status === 404) { changed ||= !it.gone; it.gone = true; }
+        else if (r.ok) {
+          const d = await r.json();
+          if (typeof d.price === "number" && d.price !== it.price) {
+            if (d.price < it.price) it.was = Math.max(it.was || 0, it.price);
+            it.price = d.price;
+            it.priceString = d.priceString;
+            changed = true;
+          }
+        }
+        it.checked = Date.now();
+      } catch {} // offline: try again next open
+    }
+    this.store();
+    return changed;
   },
 };
 
@@ -163,10 +188,13 @@ function card(item) {
   sub.className = "sub";
   sub.textContent = [item.location, ago(item.postedDate)].filter(Boolean).join(" · ");
   meta.append(price, title, sub);
-  if (item.dealReason) {
+  const note = item.gone ? "No longer listed"
+    : item.was > item.price ? `Price dropped from $${item.was.toLocaleString()}`
+    : item.dealReason;
+  if (note) {
     const reason = document.createElement("span");
-    reason.className = "sub deal";
-    reason.textContent = item.dealReason;
+    reason.className = item.gone ? "sub" : "sub deal";
+    reason.textContent = note;
     meta.append(reason);
   }
   open.append(meta);
@@ -298,6 +326,7 @@ $("favbtn").addEventListener("click", () => {
     const saved = Object.values(favs.all);
     status.textContent = saved.length ? `${saved.length} saved` : "Nothing saved yet.";
     render(saved, true);
+    favs.recheck().then((changed) => { if (changed && showingFavs) render(Object.values(favs.all), true); });
   } else {
     status.textContent = "Search to begin.";
     render([], true);
