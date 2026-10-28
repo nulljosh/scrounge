@@ -1,5 +1,7 @@
 # Scrounger
 
+Formerly Curbfind and Scrounge.
+
 ![version](https://img.shields.io/badge/version-v1.0.0-blue) ![license](https://img.shields.io/badge/license-MIT-green) [![GitHub](https://img.shields.io/badge/GitHub-nulljosh%2Fscrounger-black?logo=github)](https://github.com/nulljosh/scrounger)
 
 **Live:** https://scrounger.jaybulb.com
