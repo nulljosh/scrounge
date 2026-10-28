@@ -50,7 +50,7 @@ Skipped: chat, payments, seller profiles, shipping (Scrounger is a browser, not 
 | Category chips under search instead of a select | OfferUp, Marketplace, Vinted | S | done 2026-10-28 (web, iOS, macOS; KMP has no category UI yet) |
 | Share a listing (native share sheet) | all | S | done 2026-10-28 (web, iOS, macOS) |
 | Recently viewed row | Mercari, Petco, Marketplace | S | done 2026-10-28 (web, iOS, macOS) |
-| Saved searches with "new since last look" counts | OfferUp, Mercari, Kijiji | M | open |
+| Saved searches with "new since last look" counts (up to 5, checked on load) | OfferUp, Mercari, Kijiji | M | done 2026-10-28 (web; native next) |
 | Map view of results (static OSM tiles on web, MapKit on iOS and macOS; pins open the listing) | Marketplace, Kijiji | M | done 2026-10-28 (web, iOS, macOS) |
 | Price drop badge on saved items | Mercari, Poshmark | M | open |
 | One-word store name (Scrounge was taken, now Scrounger everywhere) | - | S | done 2026-10-28 |
