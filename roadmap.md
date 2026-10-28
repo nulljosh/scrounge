@@ -38,3 +38,19 @@ Plan: `~/.claude/plans/magical-noodling-candy.md`.
 
 ## Rename follow-ups, 2026-10-26
 - [ ] App Store: needs `asc web auth login` (throttled, skipped 2026-10-26). Probe "Scrounge" on record 6809031662 (`asc-name-creator`, one name everywhere, read it back 3x), then set name on the next editable version (iOS 1.0.0 is REJECTED 4.3, so edit that version's app info). If Apple refuses, pick another one-word name and redo the sweep. Store still says Curbfind until then.
+
+## /mobbin gap matrix (2026-10-28)
+Compared against OfferUp, Facebook Marketplace, Craigslist, Mercari, Kijiji, Poshmark, Gumtree and Vinted (App Store sheets).
+Skipped: chat, payments, seller profiles, shipping (Scrounge is a browser, not a market).
+
+| Gap | Who has it | Size | Status |
+|---|---|---|---|
+| House UI: capsule controls, rounded photo cards, light and dark | all | S | done 2026-10-28 (web) |
+| Hide repeat reposts in results | OfferUp, Marketplace | S | done 2026-10-28 (web) |
+| Category chips under search instead of a select | OfferUp, Marketplace, Vinted | S | open |
+| Share a listing (native share sheet) | all | S | open |
+| Recently viewed row | Mercari, Petco, Marketplace | S | open |
+| Saved searches with "new since last look" counts | OfferUp, Mercari, Kijiji | M | open |
+| Map view of results | Marketplace, Kijiji | M | open |
+| Price drop badge on saved items | Mercari, Poshmark | M | open |
+| Store name: "Scrounge" is taken on the App Store, needs a store-only variant | - | S | probing |
