@@ -30,6 +30,7 @@ struct RootView: View {
         ResultsList(model: model, selection: $selection, savedOnly: nil, usesSelection: false)
             .navigationTitle("Scrounger")
             .navigationDestination(for: Listing.self) { ListingDetailView(listing: $0) }
+            .navigationDestination(item: $selection) { ListingDetailView(listing: $0) }
             .searchable(text: $model.filters.query, prompt: "Search listings")
             .onSubmit(of: .search) { Task { await model.run() } }
             .task { await model.run() }

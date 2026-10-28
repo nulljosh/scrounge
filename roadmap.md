@@ -49,7 +49,7 @@ Skipped: chat, payments, seller profiles, shipping (Scrounger is a browser, not 
 | Hide repeat reposts in results | OfferUp, Marketplace | S | done 2026-10-28 (web) |
 | Category chips under search instead of a select | OfferUp, Marketplace, Vinted | S | done 2026-10-28 (web, iOS, macOS; KMP has no category UI yet) |
 | Share a listing (native share sheet) | all | S | done 2026-10-28 (web, iOS, macOS) |
-| Recently viewed row | Mercari, Petco, Marketplace | S | open |
+| Recently viewed row | Mercari, Petco, Marketplace | S | done 2026-10-28 (web, iOS, macOS) |
 | Saved searches with "new since last look" counts | OfferUp, Mercari, Kijiji | M | open |
 | Map view of results | Marketplace, Kijiji | M | open |
 | Price drop badge on saved items | Mercari, Poshmark | M | open |

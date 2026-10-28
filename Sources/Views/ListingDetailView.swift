@@ -3,6 +3,7 @@ import SwiftUI
 struct ListingDetailView: View {
     let listing: Listing
     var api = CraigslistAPI()
+    @EnvironmentObject private var favorites: Favorites
 
     @State private var detail: PostingDetail?
     @State private var failure: String?
@@ -30,7 +31,10 @@ struct ListingDetailView: View {
                 }
             }
         }
-        .task { await load() }
+        .task {
+            favorites.viewed(listing)
+            await load()
+        }
     }
 
     private var gallery: some View {

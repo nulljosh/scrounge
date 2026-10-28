@@ -10,71 +10,7 @@
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="stylesheet" href="tokens.css">
-<style>
-/* Scrounger on the house system (hermes/landing/tokens.css): 8 point grid, 48 point capsule
-   controls, radii 20 and 28, system font, no shadows. Curb blue is the only colour it owns. */
-:root{--accent:#0044cc;--btn:#0044cc;--ring:rgba(0,68,204,.3);--bg:#fdfdfd;--bg2:#f2f3f7;--surface:#f2f3f7;--line:#dcdde5;--border:#dcdde5;--text:#1a1a1a;--text2:#5a5c6b;--text3:#8a8d99;--curb:#0044cc;--bulb:#0044cc;--bulb-deep:#0044cc;--font:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif;--control:48px;--r-card:20px;--r-pill:999px;--motion:.2s ease}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--accent:#6f9dff;--btn:#1f55e0;--ring:rgba(111,157,255,.3);--bg:#0a0e19;--bg2:#141a2a;--surface:#141a2a;--line:#252d44;--border:#252d44;--text:#f2f2f5;--text2:#a2a9bc;--text3:#6d7488;--curb:#6f9dff;--bulb:#6f9dff;--bulb-deep:#6f9dff}}
-*{box-sizing:border-box}
-body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text);font-size:17px;line-height:24px}
-header{padding:24px 20px 16px;position:sticky;top:0;background:var(--bg);z-index:5;border-bottom:1px solid var(--line)}
-.head{max-width:1280px;margin:0 auto}
-.brand{display:flex;align-items:center;gap:12px;margin:0 0 4px;font-weight:700;font-size:34px;line-height:40px;letter-spacing:-.01em}
-.brand img{width:40px;height:40px;border-radius:22.5%}
-.tagline{margin:0 0 16px;color:var(--text2);font-size:17px;max-width:52ch}
-form{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-input,select,button{font:inherit;font-size:15px;font-family:var(--font);height:var(--control);border:1px solid var(--line);background:var(--bg);color:var(--text);padding:0 20px;border-radius:var(--r-pill);min-width:0;transition:border-color var(--motion),background var(--motion)}
-select{padding-right:16px}
-input:hover,select:hover{border-color:var(--text3)}
-input:focus-visible,select:focus-visible,button:focus-visible,.out:focus-visible{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px var(--ring)}
-#q{flex:1 1 240px}
-#city{width:160px}
-button{cursor:pointer;font-weight:600}
-button:hover{background:var(--surface)}
-button.go{background:var(--btn);border-color:var(--btn);color:#fff;padding:0 24px}
-button.go:hover{filter:brightness(1.1)}
-button[aria-pressed=true]:not(.star){background:var(--accent);border-color:var(--accent);color:var(--bg)}
-.more-filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;width:100%}
-.more-filters[hidden]{display:none}
-label.chk{display:flex;gap:8px;align-items:center;font-size:15px;color:var(--text2);height:var(--control)}
-label.chk input{height:20px;width:20px;padding:0;accent-color:var(--accent)}
-.narrow{width:112px}
-.chips{display:flex;gap:8px;width:100%;overflow-x:auto;scrollbar-width:none}
-.chips::-webkit-scrollbar{display:none}
-.chips button{flex:none;padding:0 16px}
-#status{max-width:1280px;margin:0 auto;padding:16px 20px 0;color:var(--text2);font-size:15px}
-#grid{list-style:none;margin:0 auto;padding:16px 20px 32px;max-width:1280px;display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(224px,1fr))}
-.card{border-radius:var(--r-card);overflow:hidden;background:var(--surface);display:flex;flex-direction:column;transition:transform var(--motion)}
-.card:hover{transform:translateY(-2px)}
-.card button.open{all:unset;cursor:pointer;display:flex;flex-direction:column;height:100%}
-.card button.open:focus-visible{box-shadow:inset 0 0 0 4px var(--ring)}
-.card img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--bg2);display:block}
-.noimg{width:100%;aspect-ratio:4/3;background:var(--bg2);display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:13px}
-.meta{padding:12px 16px 16px;display:flex;flex-direction:column;gap:4px;flex:1}
-.price{font-weight:700;font-size:20px;line-height:28px}
-.title{font-size:15px;line-height:20px}
-.sub{font-size:13px;line-height:16px;color:var(--text2)}
-.sub.deal{color:var(--accent);font-weight:600}
-.star{position:absolute;top:8px;right:8px;background:var(--bg);border:0;width:40px;height:40px;padding:0;line-height:1;font-size:18px;color:var(--text3)}
-.star[aria-pressed=true]{background:var(--btn);color:#fff}
-.cardwrap{position:relative}
-#more{display:block;margin:0 auto 48px;padding:0 32px}
-#more[hidden]{display:none}
-dialog{border:0;border-radius:28px;padding:0;max-width:720px;width:calc(100% - 32px);max-height:calc(100% - 48px);background:var(--bg);color:var(--text)}
-dialog::backdrop{background:rgba(0,0,0,.55)}
-.dhead{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:24px 24px 16px}
-.dbody{padding:0 24px 24px}
-.dbody p{white-space:pre-wrap;margin:0 0 16px}
-.shots{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:8px}
-.shots img{height:200px;border-radius:12px}
-.attrs{list-style:none;padding:0;margin:0 0 16px;font-size:15px;color:var(--text2)}
-.actions{display:flex;flex-wrap:wrap;gap:8px}
-.out{display:inline-flex;align-items:center;height:var(--control);background:var(--btn);color:#fff;padding:0 24px;border-radius:var(--r-pill);text-decoration:none;font-weight:600;font-size:15px}
-footer{max-width:1280px;margin:0 auto;padding:24px 20px 48px;border-top:1px solid var(--line);font-size:13px;line-height:16px;color:var(--text2)}
-footer a{color:inherit}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}.card:hover{transform:none}}
-@media (max-width:600px){header{position:static;padding-top:16px}.brand{font-size:28px;line-height:32px}#city,#more{flex:1 1 100%}}
-</style>
+<link rel="stylesheet" href="app.css">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://scrounger.jaybulb.com/og.png">
     <meta property="og:image:width" content="1200">
@@ -121,6 +57,10 @@ footer a{color:inherit}
   </div>
 </header>
 
+<section id="recent" hidden>
+  <h2>Recently viewed</h2>
+  <ul class="strip" id="recentlist"></ul>
+</section>
 <p id="status">Search to begin.</p>
 <ul id="grid"></ul>
 <button id="more" hidden>Show more</button>
@@ -171,6 +111,20 @@ const favs = {
     return this.has(item.id);
   },
 };
+
+// Last 12 opened listings, newest first, stored whole like favs.
+const recent = {
+  all: JSON.parse(localStorage.getItem("scrounger:recent") || "[]"),
+  add(item) {
+    this.all = [item, ...this.all.filter((r) => r.id !== item.id)].slice(0, 12);
+    localStorage.setItem("scrounger:recent", JSON.stringify(this.all));
+    drawRecent();
+  },
+};
+function drawRecent() {
+  $("recentlist").replaceChildren(...recent.all.map(card));
+  $("recent").hidden = !recent.all.length || showingFavs;
+}
 
 for (const [v, label] of CATEGORIES) {
   const b = document.createElement("button");
@@ -275,6 +229,7 @@ function render(items, reset) {
 
 async function showDetail(item) {
   detailItem = item;
+  recent.add(item);
   $("dtitle").textContent = item.title;
   $("dsub").textContent = [item.priceString, item.location].filter(Boolean).join(" · ");
   $("dlink").href = item.url;
@@ -314,6 +269,7 @@ $("toggle").addEventListener("click", () => {
 $("favbtn").addEventListener("click", () => {
   showingFavs = !showingFavs;
   $("favbtn").setAttribute("aria-pressed", String(showingFavs));
+  drawRecent();
   if (showingFavs) {
     const saved = Object.values(favs.all);
     status.textContent = saved.length ? `${saved.length} saved` : "Nothing saved yet.";
@@ -329,6 +285,7 @@ $("f").addEventListener("submit", async (e) => {
   e.preventDefault();
   showingFavs = false;
   $("favbtn").setAttribute("aria-pressed", "false");
+  drawRecent();
 
   const p = new URLSearchParams({ city: $("city").value.trim() || "vancouver", cat: $("cat").value });
   if ($("q").value.trim()) p.set("q", $("q").value.trim());
