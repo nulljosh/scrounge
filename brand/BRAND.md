@@ -1,11 +1,11 @@
-# Scrounge brand kit and design system
+# Scrounger brand kit and design system
 
 a price tag
 
 ## The mark
 One bold flat white glyph on an accent gradient tile. No text, no outline, no emblem.
 
-- `../Scrounge.icon` is the source of truth (Icon Composer). Light and dark fills are set in it.
+- `../Scrounger.icon` is the source of truth (Icon Composer). Light and dark fills are set in it.
 - `../icon.svg` is the flat copy for READMEs (shown at 80 px). `icon-1024.png` is the App Store icon, no alpha.
 - `mark.svg` is the glyph alone in `currentColor` for your own background.
 - Clear space equal to the width of the glyph's thickest stroke. Smallest size 16 px.

@@ -8,7 +8,7 @@ final class NearMe: NSObject, CLLocationManagerDelegate {
         case denied, unavailable
         var errorDescription: String? {
             switch self {
-            case .denied: return "Location is off for Scrounge. Pick a city instead."
+            case .denied: return "Location is off for Scrounger. Pick a city instead."
             case .unavailable: return "Couldn't find your location."
             }
         }

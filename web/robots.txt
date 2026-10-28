@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://scrounge.jaybulb.com/sitemap.xml
+Sitemap: https://scrounger.jaybulb.com/sitemap.xml

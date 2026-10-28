@@ -1,4 +1,4 @@
-# Scrounge roadmap
+# Scrounger roadmap
 
 > Priority tier 1 (2026-10-17): live blocker, work first. Order: live blockers, ship pushes, active features, portfolio, exploratory. See ~/Documents/Code/LOOP-HANDOFF.md.
 
@@ -7,12 +7,12 @@ Plan: `~/.claude/plans/magical-noodling-candy.md`.
 
 ## Open
 - [ ] OfferUp reviews complain about off-platform scam redirects and bans with
-      no recourse. Scrounge (browser, no payments) sidesteps that class of
+      no recourse. Scrounger (browser, no payments) sidesteps that class of
       complaint entirely — worth a line in store copy once listed.
       photo grid has no watch story and no visionOS-specific affordance.
 
 ## Notes
-- Live at scrounge.jaybulb.com. Serve and share that, never the pages.dev URL.
+- Live at scrounger.jaybulb.com. Serve and share that, never the pages.dev URL.
 - `sapi` ignores User-Agent completely, so native needs no disguise and no server.
 - `cc` is ignored upstream; any page size but 360 is rejected.
 - Posting bodies are stranger-authored HTML. Both decoders strip them to plain
@@ -37,11 +37,11 @@ Plan: `~/.claude/plans/magical-noodling-candy.md`.
 ## Ingested 2026-10-25
 
 ## Rename follow-ups, 2026-10-26
-- [ ] App Store: needs `asc web auth login` (throttled, skipped 2026-10-26). Probe "Scrounge" on record 6809031662 (`asc-name-creator`, one name everywhere, read it back 3x), then set name on the next editable version (iOS 1.0.0 is REJECTED 4.3, so edit that version's app info). If Apple refuses, pick another one-word name and redo the sweep. Store still says Curbfind until then.
+- [x] App Store name: "Scrounge" was taken, so the app became Scrounger (2026-10-28). Set on the editable iOS 1.0.0 app info, read back 3x.
 
 ## /mobbin gap matrix (2026-10-28)
 Compared against OfferUp, Facebook Marketplace, Craigslist, Mercari, Kijiji, Poshmark, Gumtree and Vinted (App Store sheets).
-Skipped: chat, payments, seller profiles, shipping (Scrounge is a browser, not a market).
+Skipped: chat, payments, seller profiles, shipping (Scrounger is a browser, not a market).
 
 | Gap | Who has it | Size | Status |
 |---|---|---|---|
@@ -53,4 +53,4 @@ Skipped: chat, payments, seller profiles, shipping (Scrounge is a browser, not a
 | Saved searches with "new since last look" counts | OfferUp, Mercari, Kijiji | M | open |
 | Map view of results | Marketplace, Kijiji | M | open |
 | Price drop badge on saved items | Mercari, Poshmark | M | open |
-| Store name: "Scrounge" is taken on the App Store, needs a store-only variant | - | S | probing |
+| One-word store name (Scrounge was taken, now Scrounger everywhere) | - | S | done 2026-10-28 |

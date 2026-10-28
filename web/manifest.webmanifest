@@ -1,6 +1,6 @@
 {
-  "name": "Scrounge",
-  "short_name": "Scrounge",
+  "name": "Scrounger",
+  "short_name": "Scrounger",
   "start_url": "/app/",
   "scope": "/app/",
   "display": "standalone",

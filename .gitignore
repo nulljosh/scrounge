@@ -2,7 +2,7 @@ node_modules/
 .DS_Store
 .asc/
 dist/
-Scrounge.xcodeproj/xcuserdata/
+Scrounger.xcodeproj/xcuserdata/
 *.xcarchive
 build/
 .build/

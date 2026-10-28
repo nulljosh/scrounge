@@ -1,10 +1,10 @@
-# Contributing to scrounge
+# Contributing to scrounger
 
 ## Setup
 
 ```
-git clone https://github.com/nulljosh/scrounge.git
-cd scrounge
+git clone https://github.com/nulljosh/scrounger.git
+cd scrounger
 npm install
 ```
 

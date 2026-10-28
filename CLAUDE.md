@@ -1,6 +1,6 @@
-# Scrounge
+# Scrounger
 
-Craigslist browser, no clutter: search, read, save. Web + native SwiftUI iOS/macOS + Kotlin Multiplatform Android/desktop. Live at [scrounge.jaybulb.com](https://scrounge.jaybulb.com). ASC 6809031662 (renamed from curbside 2026-09-05, Pages project is still `curbside`).
+Craigslist browser, no clutter: search, read, save. Web + native SwiftUI iOS/macOS + Kotlin Multiplatform Android/desktop. Live at [scrounger.jaybulb.com](https://scrounger.jaybulb.com). ASC 6809031662 (renamed from curbside 2026-09-05, Pages project is still `curbside`).
 
 ## Stack
 - `worker/`: Cloudflare Worker (`curbside-api`), talks to Craigslist's own undocumented `sapi.craigslist.org/web/v8/postings` endpoint. `decode.js` turns its positional-array responses into real objects. KV caches city → area id forever (Craigslist publishes no directory). Native rate limiting via the `ratelimit` binding.
@@ -28,4 +28,4 @@ Listing titles are untrusted and go straight into the AI prompt — a live promp
 See `roadmap.md`.
 
 ## Still on old names on purpose
-Bundle ID `com.nulljosh.curbside`, Pages project `curbside`, Worker `curbside-api`, KMP package `com.nulljosh.curbside`, `curbside-tui`, UserDefaults key `curbfind.areas.v1`, localStorage key `curbside:favs`, and the old hosts `curbfind.jaybulb.com` and `curbside.jaybulb.com` (keep serving). Renamed from Curbfind to Scrounge 2026-10-26; App Store listing still says Curbfind until the next editable version.
+Bundle ID `com.nulljosh.curbside`, Pages project `curbside`, Worker `curbside-api`, KMP package `com.nulljosh.curbside`, `curbside-tui`, UserDefaults key `curbfind.areas.v1`, localStorage key `curbside:favs`, and the old hosts `curbfind.jaybulb.com`, `curbside.jaybulb.com` and `scrounge.jaybulb.com` (keep serving). Renamed Curbfind to Scrounge 2026-10-26, then Scrounge to Scrounger 2026-10-28 because Apple refused plain Scrounge. Store name Scrounger is set on the editable iOS 1.0.0 app info; it goes live with the next version.

@@ -24,11 +24,11 @@
         {
           "glass": false,
           "image-name": "glyph.png",
-          "name": "Scrounge"
+          "name": "Scrounger"
         }
       ],
       "lighting": "individual",
-      "name": "Scrounge",
+      "name": "Scrounger",
       "shadow": {
         "kind": "neutral",
         "opacity": 0.3

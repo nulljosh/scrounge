@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct ScroungeMacApp: App {
+struct ScroungerMacApp: App {
     @StateObject private var favorites = Favorites()
 
     var body: some Scene {
@@ -36,7 +36,7 @@ struct MacRootView: View {
     private var results: some View {
         ResultsList(model: model, selection: $selection,
                     savedOnly: showingSaved ? favorites.items : nil)
-            .navigationTitle(showingSaved ? "Saved" : "Scrounge")
+            .navigationTitle(showingSaved ? "Saved" : "Scrounger")
             .navigationSplitViewColumnWidth(min: 300, ideal: 340)
             .toolbar {
                 Toggle(isOn: $showingSaved) { Label("Saved", systemImage: "star") }

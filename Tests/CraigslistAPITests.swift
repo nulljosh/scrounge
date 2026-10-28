@@ -1,5 +1,5 @@
 import XCTest
-@testable import Scrounge
+@testable import Scrounger
 
 /// Decodes the same worker/fixtures/search.json the JS decoder is pinned to, so
 /// the two ports cannot drift apart without one of them going red.
