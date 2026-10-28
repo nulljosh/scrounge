@@ -22,7 +22,7 @@ Listing titles are untrusted and go straight into the AI prompt — a live promp
 - `sapi` ignores `cc` (a Canadian area answers fine with `cc=US`) and rejects any page size but 360.
 - Hand-built `<city>.craigslist.org/.../<id>.html` URLs 404. Always use the `url` field the API gives back (`/view/d/<slug>/<uuid>`).
 - Posting bodies are HTML written by strangers; `sanitizeBody`/`Self.sanitize` collapse to plain text before anything renders them, deliberately not a markup sanitizer.
-- A push deploys nothing here either. Worker: `wrangler deploy` from `worker/`. Web: `wrangler pages deploy web --project-name curbside`.
+- A push deploys nothing here either. Worker: `wrangler deploy` from `worker/`. Site: `scripts/build-site.sh && wrangler pages deploy dist --project-name curbside` (docs/ at root, web/ at /app; deploying web/ alone wipes the landing).
 
 ## Open work
 See `roadmap.md`.
