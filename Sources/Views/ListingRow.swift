@@ -29,7 +29,11 @@ struct ListingRow: View {
             Text(listing.priceString ?? "—").font(.headline)
             Text(listing.title).font(.subheadline).lineLimit(2)
             Text(subtitle).font(.caption).foregroundStyle(.secondary)
-            if let reason = listing.dealReason {
+            if listing.gone == true {
+                Text("No longer listed").font(.caption).foregroundStyle(.secondary)
+            } else if let was = listing.was, was > (listing.price ?? 0) {
+                Text("Price dropped from $\(was)").font(.caption).fontWeight(.semibold).foregroundStyle(.tint)
+            } else if let reason = listing.dealReason {
                 Text(reason).font(.caption).fontWeight(.semibold).foregroundStyle(.tint)
             }
         }

@@ -104,4 +104,24 @@ final class CraigslistAPITests: XCTestCase {
     func testSanitizeOnEmptyAndNilLikeInputNeverThrows() {
         XCTAssertEqual(CraigslistAPI.sanitize(""), "")
     }
+
+    /// Saved listings on people's devices predate `was` and `gone`; if they stopped decoding,
+    /// `Favorites.load` would quietly hand back an empty Saved list.
+    func testSavedListingFromBeforePriceTrackingStillDecodes() throws {
+        let old = #"{"id":1,"uuid":"u","title":"Bike","slug":"bike","price":50,"priceString":"$50","postedDate":0,"location":"Burnaby","images":[]}"#
+        let l = try JSONDecoder().decode(Listing.self, from: Data(old.utf8))
+        XCTAssertEqual(l.price, 50)
+        XCTAssertNil(l.was)
+        XCTAssertNil(l.gone)
+    }
+
+    func testSavedSearchRoundTripsAndNamesItself() throws {
+        var f = SearchFilters()
+        f.query = "bike"
+        let back = try JSONDecoder().decode(SearchFilters.self, from: JSONEncoder().encode(f))
+        XCTAssertEqual(back, f)
+        XCTAssertEqual(f.label, "bike in vancouver")
+        f.query = ""
+        XCTAssertEqual(f.label, "For sale in vancouver")
+    }
 }

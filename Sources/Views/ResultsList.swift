@@ -25,13 +25,59 @@ struct ResultsList: View {
             }
         }
         .overlay { statusOverlay }
-        .safeAreaInset(edge: .top) { if savedOnly == nil { categoryChips } }
+        .safeAreaInset(edge: .top) {
+            if savedOnly == nil {
+                VStack(spacing: 0) {
+                    categoryChips
+                    if !favorites.searches.isEmpty { savedSearchChips }
+                }
+                .background(.bar)
+            }
+        }
         .toolbar {
             if savedOnly == nil {
                 ToolbarItem {
                     Toggle(isOn: $showMap) { Label("Map", systemImage: "map") }.toggleStyle(.button)
                 }
+                ToolbarItem {
+                    let saved = favorites.isSaved(model.filters)
+                    Button {
+                        favorites.toggleSearch(model.filters, newest: newest)
+                    } label: {
+                        Label(saved ? "Forget search" : "Save search", systemImage: saved ? "bookmark.fill" : "bookmark")
+                    }
+                    .disabled(model.listings.isEmpty)
+                }
             }
+        }
+        .task(id: savedOnly == nil) {
+            let api = CraigslistAPI()
+            if savedOnly == nil { await favorites.countNew(api: api) } else { await favorites.recheck(api: api) }
+        }
+        .onChange(of: model.listings) { favorites.seen(model.filters, newest: newest) }
+    }
+
+    private var newest: Date { model.listings.map(\.postedDate).max() ?? .distantPast }
+
+    private var savedSearchChips: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 8) {
+                ForEach(favorites.searches) { s in
+                    let title = s.fresh > 0 ? "\(s.filters.label) · \(s.fresh > 99 ? "99+" : "\(s.fresh)") new" : s.filters.label
+                    if s.filters == model.filters {
+                        Button(title) {}.buttonStyle(.borderedProminent)
+                    } else {
+                        Button(title) {
+                            model.filters = s.filters
+                            Task { await model.run() }
+                        }
+                        .buttonStyle(.bordered)
+                    }
+                }
+            }
+            .buttonBorderShape(.capsule)
+            .padding(.horizontal)
+            .padding(.bottom, 8)
         }
     }
 
@@ -77,7 +123,6 @@ struct ResultsList: View {
             .padding(.horizontal)
             .padding(.vertical, 8)
         }
-        .background(.bar)
     }
 
     @ViewBuilder private var rows: some View {

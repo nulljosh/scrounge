@@ -225,7 +225,8 @@ struct CraigslistAPI {
                              location: (item["location"] as? [String: Any])?["description"] as? String,
                              attributes: attrs,
                              images: images,
-                             url: (item["url"] as? String).flatMap(URL.init(string:)))
+                             url: (item["url"] as? String).flatMap(URL.init(string:)),
+                             price: item["price"] as? Int)
     }
 
     /// Posting bodies are HTML written by strangers, so they get collapsed to

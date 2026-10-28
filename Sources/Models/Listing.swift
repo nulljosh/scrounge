@@ -5,14 +5,18 @@ struct Listing: Identifiable, Hashable, Codable {
     let uuid: String
     let title: String
     let slug: String?
-    let price: Int?
-    let priceString: String?
+    var price: Int?
+    var priceString: String?
     let postedDate: Date
     let location: String?
     let lat: Double?
     let lon: Double?
     let images: [String]
     var dealReason: String? = nil
+    /// Saved items only: the higher price it was saved at, once the live price drops.
+    var was: Int? = nil
+    /// Saved items only: the seller took the post down.
+    var gone: Bool? = nil
 
     var thumbURL: URL? { images.first.flatMap { URL(string: $0 + "_300x300.jpg") } }
     var imageURLs: [URL] { images.compactMap { URL(string: $0 + "_600x450.jpg") } }
@@ -30,6 +34,7 @@ struct PostingDetail {
     let attributes: [(label: String, value: String)]
     let images: [URL]
     let url: URL?
+    var price: Int? = nil
 }
 
 struct Category: Identifiable, Hashable {
@@ -50,7 +55,7 @@ struct Category: Identifiable, Hashable {
     ]
 }
 
-struct SearchFilters: Equatable {
+struct SearchFilters: Hashable, Codable {
     var query = ""
     var category = "sss"
     var city = "vancouver"
@@ -60,6 +65,12 @@ struct SearchFilters: Equatable {
     var distance = ""
     var hasPhoto = false
     var sort = "deal"
+
+    /// What a saved search is called: the query, or the category, and the city.
+    var label: String {
+        let what = query.isEmpty ? (Category.all.first { $0.id == category }?.name ?? "Listings") : query
+        return "\(what) in \(city)"
+    }
 
     static let sorts = [("deal", "Best deals"), ("rel", "Best match"), ("date", "Newest"),
                         ("priceasc", "Price: low to high"), ("pricedsc", "Price: high to low")]
