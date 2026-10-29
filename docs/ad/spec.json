@@ -1,0 +1,315 @@
+{
+ "out": "scrounger-ad.mp4",
+ "size": [
+  1920,
+  1080
+ ],
+ "fps": 30,
+ "font": "fonts/SF-Medium.ttf",
+ "font_bold": "fonts/SF-Bold.ttf",
+ "font_size": 100,
+ "palette": {
+  "paper": "#fdfdfd",
+  "ink": "#0a0e19",
+  "blue": "#0044cc",
+  "sky2": "#6f9dff",
+  "mist": "#f2f3f7",
+  "night": "#141a2a"
+ },
+ "sky": "ink",
+ "glow": [
+  "paper",
+  "sky2"
+ ],
+ "open": {
+  "secs": 1.6
+ },
+ "pool": [
+  {
+   "image": "scrounger/app-light.png",
+   "focus": [
+    0.5,
+    0.42
+   ],
+   "zoom": 1.9,
+   "sky": "paper"
+  },
+  {
+   "image": "scrounger/map.png",
+   "focus": [
+    0.47,
+    0.42
+   ],
+   "zoom": 2.4,
+   "sky": "ink"
+  },
+  {
+   "image": "scrounger/cars.png",
+   "focus": [
+    0.4,
+    0.42
+   ],
+   "zoom": 2.2,
+   "sky": "paper"
+  },
+  {
+   "image": "scrounger/d-drop.png",
+   "focus": [
+    0.5,
+    0.78
+   ],
+   "zoom": 1.9,
+   "sky": "ink",
+   "push": 0.0
+  },
+  {
+   "image": "scrounger/d-chips.png",
+   "focus": [
+    0.5,
+    0.78
+   ],
+   "zoom": 1.4,
+   "sky": "paper",
+   "push": 0.0
+  },
+  {
+   "image": "scrounger/phone-dark.png",
+   "focus": [
+    0.5,
+    0.75
+   ],
+   "zoom": 1.3,
+   "sky": "ink"
+  },
+  {
+   "image": "scrounger/d-detail.png",
+   "focus": [
+    0.5,
+    0.78
+   ],
+   "zoom": 1.9,
+   "sky": "paper",
+   "push": 0.0
+  },
+  {
+   "image": "scrounger/app-dark.png",
+   "focus": [
+    0.5,
+    0.42
+   ],
+   "zoom": 1.9,
+   "sky": "ink"
+  },
+  {
+   "image": "scrounger/d-header.png",
+   "focus": [
+    0.5,
+    0.78
+   ],
+   "zoom": 1.05,
+   "sky": "paper",
+   "push": 0.0
+  },
+  {
+   "image": "scrounger/cars.png",
+   "focus": [
+    0.6,
+    0.42
+   ],
+   "zoom": 2.6,
+   "sky": "ink"
+  },
+  {
+   "image": "scrounger/landing.png",
+   "focus": [
+    0.5,
+    0.48
+   ],
+   "zoom": 2.2,
+   "sky": "paper"
+  },
+  {
+   "image": "scrounger/map.png",
+   "focus": [
+    0.38,
+    0.4
+   ],
+   "zoom": 3.2,
+   "sky": "ink"
+  },
+  {
+   "image": "scrounger/cars.png",
+   "focus": [
+    0.4,
+    0.42
+   ],
+   "zoom": 3.0,
+   "sky": "paper"
+  },
+  {
+   "fill": "blue",
+   "sky": "ink"
+  },
+  {
+   "image": "scrounger/map.png",
+   "focus": [
+    0.55,
+    0.45
+   ],
+   "zoom": 2.8,
+   "sky": "paper"
+  },
+  {
+   "fill": "mist",
+   "sky": "ink"
+  },
+  {
+   "image": "scrounger/d-drop.png",
+   "focus": [
+    0.5,
+    0.78
+   ],
+   "zoom": 2.4,
+   "sky": "paper",
+   "push": 0.0
+  },
+  {
+   "fill": "sky2",
+   "sky": "ink"
+  },
+  {
+   "image": "scrounger/map.png",
+   "focus": [
+    0.47,
+    0.42
+   ],
+   "zoom": 3.2,
+   "sky": "ink"
+  },
+  {
+   "fill": "night",
+   "sky": "ink"
+  },
+  {
+   "image": "scrounger/cars.png",
+   "focus": [
+    0.4,
+    0.42
+   ],
+   "zoom": 3.4,
+   "sky": "paper"
+  },
+  {
+   "fill": "blue",
+   "sky": "ink"
+  },
+  {
+   "image": "scrounger/app-dark.png",
+   "focus": [
+    0.5,
+    0.42
+   ],
+   "zoom": 2.6,
+   "sky": "paper"
+  },
+  {
+   "fill": "mist",
+   "sky": "ink"
+  },
+  {
+   "image": "scrounger/cars.png",
+   "focus": [
+    0.6,
+    0.42
+   ],
+   "zoom": 3.2,
+   "sky": "ink"
+  },
+  {
+   "fill": "sky2",
+   "sky": "ink"
+  },
+  {
+   "image": "scrounger/d-detail.png",
+   "focus": [
+    0.5,
+    0.78
+   ],
+   "zoom": 2.4,
+   "sky": "paper",
+   "push": 0.0
+  },
+  {
+   "fill": "blue",
+   "sky": "ink"
+  },
+  {
+   "image": "scrounger/cars.png",
+   "focus": [
+    0.25,
+    0.42
+   ],
+   "zoom": 3.0,
+   "sky": "ink"
+  },
+  {
+   "fill": "night",
+   "sky": "ink"
+  },
+  {
+   "image": "scrounger/map.png",
+   "focus": [
+    0.38,
+    0.4
+   ],
+   "zoom": 2.4,
+   "sky": "paper"
+  },
+  {
+   "fill": "mist",
+   "sky": "ink"
+  },
+  {
+   "image": "scrounger/cars.png",
+   "focus": [
+    0.4,
+    0.42
+   ],
+   "zoom": 2.2,
+   "sky": "ink"
+  },
+  {
+   "fill": "blue",
+   "sky": "ink"
+  }
+ ],
+ "grain": 0.15,
+ "schedule": {
+  "count": 34,
+  "first": 1.05,
+  "last": 0.12
+ },
+ "words": [
+  [
+   12,
+   "Find"
+  ],
+  [
+   16,
+   "it"
+  ],
+  [
+   18,
+   "first."
+  ]
+ ],
+ "title": {
+  "text": "Scrounger",
+  "secs": 1.4
+ },
+ "end": {
+  "mark": "scrounger/mark.png",
+  "name": "Scrounger",
+  "secs": 3.0
+ }
+}
