@@ -36,9 +36,6 @@ Plan: `~/.claude/plans/magical-noodling-candy.md`.
 
 ## Ingested 2026-10-25
 
-## Rename follow-ups, 2026-10-26
-- [x] App Store name: "Scrounge" was taken, so the app became Scrounger (2026-10-28). Set on the editable iOS 1.0.0 app info, read back 3x.
-
 ## /mobbin gap matrix (2026-10-28)
 Compared against OfferUp, Facebook Marketplace, Craigslist, Mercari, Kijiji, Poshmark, Gumtree and Vinted (App Store sheets).
 Skipped: chat, payments, seller profiles, shipping (Scrounger is a browser, not a market).
