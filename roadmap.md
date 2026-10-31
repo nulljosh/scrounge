@@ -51,3 +51,6 @@ Skipped: chat, payments, seller profiles, shipping (Scrounger is a browser, not 
 | Map view of results (static OSM tiles on web, MapKit on iOS and macOS; pins open the listing) | Marketplace, Kijiji | M | done 2026-10-28 (web, iOS, macOS) |
 | Price drop badge on saved items (plus "No longer listed" when a post is taken down) | Mercari, Poshmark | M | done 2026-10-28 (web, iOS, macOS) |
 | One-word store name (Scrounge was taken, now Scrounger everywhere) | - | S | done 2026-10-28 |
+
+## Ingested 2026-10-30
+- [ ] Run it for a day and see if it finds any deals
